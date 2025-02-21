@@ -5,14 +5,18 @@ import SleepTracker from './components/SleepTracker';
 import VitaminStore from "./components/VitaminStore"; 
 import HealthProfile from "./components/HealthProfile"; 
 import DoctorAccess from './components/DoctorAccess';
+import GetStarted from './components/getstart';
+import ConsultNow from './components/consult'
 const Header = () => (
   <header className="header">
     Heal Link - Your Personalized Healthcare Solution
   </header>
 );
 
-const Navigation = () => (
-  <nav className="navigation">
+const Navigation = () => {
+  const navigate = useNavigate();
+  return(  <nav className="navigation">
+   
     <div className="logo">
       <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Heal Link</Link>
     </div>
@@ -22,9 +26,12 @@ const Navigation = () => (
       <li><a href="#providers">Doctors</a></li>
       <li><a href="#vitamin-marketplace">Vitamin Marketplace</a></li>
     </ul>
-    <button className="consult-btn">Consult Now</button>
-  </nav>
-);
+    <button className="consult-btn" onClick={() => navigate('/consult')}>
+  Consult Now
+</button>
+  </nav>)
+
+};
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -42,9 +49,9 @@ const Hero = () => {
       <div className="hero-overlay">
         <h1>Your Health, Your Way</h1>
         <p>Experience a revolution in personalized healthcare with AI-driven insights and tailored wellness solutions.</p>
-        <button className="get-started" onClick={() => navigate('/vitamin-store')}>
-          Get Started
-        </button>
+        <button className="get-started" onClick={() => navigate('/get-started')}>
+  Get Started
+</button>
         
       </div>
     </div>
@@ -175,6 +182,7 @@ const DoctorAccessPage = () => (
 );
 
 
+
 // Main App component
 const App = () => {
   return (
@@ -185,7 +193,11 @@ const App = () => {
         <Route path="/vitamin-store" element={<VitaminStorePage />} />
         <Route path="/profile" element={<HealthProfilePage />} />
         <Route path="/providers" element={<DoctorAccessPage />} />
+        <Route path="/get-started" element={<GetStarted />} />
+        <Route path="/consult" element={<ConsultNow />} />
+        
       </Routes>
+ 
     </BrowserRouter>
   );
 };
