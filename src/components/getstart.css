@@ -1,0 +1,95 @@
+/* src/components/GetStarted.css */
+.get-started-container {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #f5f8fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .get-started-content {
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .get-started-content h1 {
+    color: #2196F3;
+    margin-bottom: 10px;
+    font-size: 2em;
+  }
+  
+  .get-started-content p {
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .get-started-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-group label {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="date"],
+  .form-group select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+  }
+  
+  .submit-btn {
+    background-color: #2196F3;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #1976D2;
+  }
+  
+  @media (max-width: 768px) {
+    .get-started-content {
+      padding: 20px;
+    }
+  
+    .get-started-container {
+      padding: 20px 10px;
+    }
+  }
